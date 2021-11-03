@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+#app .top-header {
+  height: 20px;
+  background-color: #df4617;
+}
+
+#app header {
+  width: 80%;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#app header img {
+  width: 20%;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#app header .header-container {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#app header .header-container .header-item {
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  align-items: center;
+}
+
+#app header .header-container .header-item img {
+  width: 25px;
+  margin-right: 3px;
+}
+
+#app main {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 1919px) {
+  #app main {
+    width: 60%;
+  }
+}
