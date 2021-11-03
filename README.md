@@ -60,3 +60,4 @@ Para rodar o projeto bastar iniciar o servidor local
 ```sh
   php artisan serve
 ```
+obs: Ao carregar a página, pode demorar alguns segundos para carregar o catálogo.
