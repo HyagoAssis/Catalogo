@@ -2,7 +2,6 @@
   <div class="product-container">
     <img :src="img" alt="Camiseta" />
     <div class="product-content">
-      <!-- <p class="product-name">Camiseta Renan de Almeida</p> -->
       <p class="product-name">{{ title }}</p>
       <p class="product-price">R$ {{ price.toFixed(2) }}</p>
       <p class="product-portion">4x R$ {{ (price / 4).toFixed(2) }}</p>

@@ -18,37 +18,16 @@ body {
 
 #app header {
   width: 80%;
-  height: 40px;
   margin: auto;
-  display: flex;
   align-items: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #app header img {
-  width: 20%;
   height: 40px;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-#app header .header-container {
-  width: 80%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#app header .header-container .header-item {
-  display: flex;
-  margin-right: 10px;
-  margin-left: 10px;
-  align-items: center;
-}
-
-#app header .header-container .header-item img {
-  width: 25px;
-  margin-right: 3px;
 }
 
 #app main {

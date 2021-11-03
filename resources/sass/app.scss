@@ -6,4 +6,42 @@
 @import 'variables';
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
-@import 'styles';
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $body-bg;
+}
+
+#app .top-header {
+    height: 20px;
+    background-color: $orange;
+}
+
+#app header {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#app header img {
+    height: 40px;
+    object-fit: contain;
+}
+#app main {
+    width: 90%;
+    margin: auto;
+}
+
+@media (min-width: 1919px) {
+    #app main {
+        width: 60%;
+    }
+}

@@ -11,7 +11,10 @@
     </div>
     <div class="product-list">
       <template>
-        <p v-if="evenProductsList.length === 0">Carregando...</p>
+        <p v-if="firtsLoad === 0">Carregando...</p>
+        <p v-if="evenProductsList.length === 0 && firtsLoad !== 0">
+          Nenhum resultado encontrado
+        </p>
         <div v-for="product in this.evenProductsList">
           <ProductCard
             class="product"
@@ -126,8 +129,6 @@ select:focus {
 <script>
 import ProductCard from "../components/ProductCard.vue";
 
-let request;
-
 var axios = require("axios").default;
 
 var options = {
@@ -135,8 +136,8 @@ var options = {
   url: "https://scrapingant.p.rapidapi.com/post",
   headers: {
     "content-type": "application/json",
-    "x-rapidapi-host": "scrapingant.p.rapidapi.com",
-    "x-rapidapi-key": "159a460b81msh0a7ee9316e0548fp1efde3jsn3d68e831414d",
+    "x-rapidapi-host": process.env.MIX_API_HOST,
+    "x-rapidapi-key": process.env.MIX_API_KEY,
   },
   data: {
     cookies: "cookie_name_1=cookie_value_1;cookie_name_2=cookie_value_2",
@@ -156,6 +157,7 @@ export default {
       tam: 0,
       products: [],
       types: [],
+      firtsLoad: 0,
     };
   },
   components: {
@@ -188,7 +190,6 @@ export default {
     },
     setPage(pageNumber) {
       this.pageAtual = pageNumber;
-      // console.log(typeof request);
       this.evenProducts();
       window.scrollTo(0, 0);
     },
@@ -218,6 +219,7 @@ export default {
     this.types = request.filters.types;
     this.evenProductsList = this.products;
     this.paginate();
+    this.firtsLoad = 1;
   },
 };
 </script>
