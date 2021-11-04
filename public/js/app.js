@@ -2118,7 +2118,8 @@ __webpack_require__.r(__webpack_exports__);
     title: String,
     type: String,
     price: Number,
-    img: String
+    img: String,
+    key: Number
   },
   name: "ProductCard"
 });
@@ -2145,6 +2146,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
 //
 //
 //
@@ -39190,7 +39192,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "product-container" }, [
-    _c("img", { attrs: { src: _vm.img, alt: "Camiseta" } }),
+    _c("img", { attrs: { src: _vm.img, alt: "Camiseta", loading: "lazy" } }),
     _vm._v(" "),
     _c("div", { staticClass: "product-content" }, [
       _c("p", { staticClass: "product-name" }, [_vm._v(_vm._s(_vm.title))]),
@@ -39293,6 +39295,7 @@ var render = function () {
               "div",
               [
                 _c("ProductCard", {
+                  key: product.id,
                   staticClass: "product",
                   attrs: {
                     title: product.name,

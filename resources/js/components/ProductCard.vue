@@ -1,6 +1,6 @@
 <template>
   <div class="product-container">
-    <img :src="img" alt="Camiseta" />
+    <img :src="img" alt="Camiseta" loading="lazy" />
     <div class="product-content">
       <p class="product-name">{{ title }}</p>
       <p class="product-price">R$ {{ price.toFixed(2) }}</p>
@@ -42,6 +42,7 @@ export default {
     type: String,
     price: Number,
     img: String,
+    key: Number,
   },
   name: "ProductCard",
 };

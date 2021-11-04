@@ -22,6 +22,7 @@
             :type="product.type.name"
             :img="product.img_cover"
             :price="product.price"
+            v-bind:key="product.id"
           />
         </div>
       </template>
@@ -173,7 +174,6 @@ export default {
         i++;
         return i > (pageAtual - 1) * ofset && i <= pageAtual * ofset;
       });
-
       if (pageAtual > this.totalPages) this.setPage(1);
     },
     evenProducts() {
