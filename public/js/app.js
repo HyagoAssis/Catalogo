@@ -2119,7 +2119,7 @@ __webpack_require__.r(__webpack_exports__);
     type: String,
     price: Number,
     img: String,
-    key: Number
+    id: Number
   },
   name: "ProductCard"
 });
@@ -2146,6 +2146,39 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2336,7 +2369,9 @@ var options = {
     setPage: function setPage(pageNumber) {
       this.pageAtual = pageNumber;
       this.evenProducts();
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0
+      });
     }
   },
   computed: {
@@ -6873,7 +6908,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.main .product-list {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.main .filter-list {\n  display: flex;\n  justify-content: center;\n  border-width: 3px;\n  border-color: #ededed;\n  border-radius: 5px;\n  border-style: solid;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n.main .filter-list .filter-item {\n  margin-right: 10px;\n  margin-left: 10px;\n}\n.filter-item {\n  background-color: #ededed;\n  padding: 5px;\n}\nselect {\n  cursor: pointer;\n  border-radius: 3px;\n  padding: 3px;\n  background-color: white;\n  border: none;\n}\nselect:hover {\n  background-color: #df4617;\n}\nselect:focus {\n  background-color: white;\n}\n.main .product-pagination {\n  display: flex;\n  justify-content: center;\n  margin-top: 10px;\n  margin-bottom: 100px;\n}\n.main .product-pagination .page-text {\n  border: 2px solid #ededed;\n  background-color: #ededed;\n  align-items: center;\n  padding: 15px;\n  font-size: 18px;\n  border-radius: 20px;\n  margin-right: 5px;\n  margin-left: 5px;\n  cursor: pointer;\n}\n.main .product-pagination .page-active {\n  border: 2px solid black;\n  background-color: black;\n  color: white;\n  align-items: center;\n  padding: 15px;\n  font-size: 18px;\n  border-radius: 20px;\n  margin-right: 5px;\n  margin-left: 5px;\n  cursor: pointer;\n}\n.main .product-pagination .page-active:hover {\n  border: 2px solid #df4617;\n}\n.main .product-pagination .page-text:hover {\n  border: 2px solid #df4617;\n  color: #df4617;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.main .product-list {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-evenly;\n}\n.main .filter-list {\n  display: flex;\n  justify-content: center;\n  border-width: 3px;\n  border-color: #ededed;\n  border-radius: 5px;\n  border-style: solid;\n  padding-top: 10px;\n  padding-bottom: 10px;\n}\n.main .filter-list .filter-item {\n  margin-right: 10px;\n  margin-left: 10px;\n}\n.filter-item {\n  background-color: #ededed;\n  padding: 5px;\n}\nselect {\n  cursor: pointer;\n  border-radius: 3px;\n  padding: 3px;\n  background-color: white;\n  border: none;\n}\nselect:hover {\n  background-color: #df4617;\n}\nselect:focus {\n  background-color: white;\n}\n.main .product-pagination {\n  display: flex;\n  justify-content: center;\n  margin-top: 10px;\n  margin-bottom: 100px;\n  flex-wrap: wrap;\n}\n.main .product-pagination .page-text {\n  border: 2px solid #ededed;\n  background-color: #ededed;\n  align-items: center;\n  padding: 15px;\n  font-size: 18px;\n  border-radius: 20px;\n  margin-right: 5px;\n  margin-left: 5px;\n  cursor: pointer;\n}\n.main .product-pagination .page-text-disabled {\n  border: 2px solid #ededed;\n  background-color: #ededed;\n  align-items: center;\n  padding: 15px;\n  font-size: 18px;\n  border-radius: 20px;\n  margin-right: 5px;\n  margin-left: 5px;\n}\n.main .product-pagination .page-active {\n  border: 2px solid black;\n  background-color: black;\n  color: white;\n  align-items: center;\n  padding: 15px;\n  font-size: 18px;\n  border-radius: 20px;\n  margin-right: 5px;\n  margin-left: 5px;\n  cursor: none;\n}\n.main .product-pagination .page-active:hover {\n  border: 2px solid #df4617;\n}\n.main .product-pagination .page-text:hover {\n  border: 2px solid #df4617;\n  color: #df4617;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39317,6 +39352,33 @@ var render = function () {
       "div",
       { staticClass: "product-pagination" },
       [
+        _vm.pageAtual !== 1
+          ? _c(
+              "button",
+              {
+                staticClass: "page-text",
+                on: {
+                  click: function ($event) {
+                    return _vm.setPage(_vm.pageAtual - 1)
+                  },
+                },
+              },
+              [_vm._v("\n      Anterior\n    ")]
+            )
+          : _c(
+              "button",
+              {
+                staticClass: "page-text-disabled",
+                attrs: { disabled: "" },
+                on: {
+                  click: function ($event) {
+                    return _vm.setPage(_vm.pageAtual - 1)
+                  },
+                },
+              },
+              [_vm._v("\n      Anterior\n    ")]
+            ),
+        _vm._v(" "),
         _vm._l(this.totalPages, function (page, index) {
           return _vm.evenProductsList.length !== 0
             ? [
@@ -39352,6 +39414,25 @@ var render = function () {
               ]
             : _vm._e()
         }),
+        _vm._v(" "),
+        _vm.pageAtual !== _vm.totalPages && _vm.totalPages !== 0
+          ? _c(
+              "button",
+              {
+                staticClass: "page-text",
+                on: {
+                  click: function ($event) {
+                    return _vm.setPage(_vm.pageAtual + 1)
+                  },
+                },
+              },
+              [_vm._v("\n      Próximo\n    ")]
+            )
+          : _c(
+              "button",
+              { staticClass: "page-text-disabled", attrs: { disabled: "" } },
+              [_vm._v("Próximo")]
+            ),
       ],
       2
     ),

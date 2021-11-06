@@ -28,6 +28,21 @@
       </template>
     </div>
     <div class="product-pagination">
+      <button
+        class="page-text"
+        v-on:click="setPage(pageAtual - 1)"
+        v-if="pageAtual !== 1"
+      >
+        Anterior
+      </button>
+      <button
+        class="page-text-disabled"
+        v-on:click="setPage(pageAtual - 1)"
+        v-else
+        disabled
+      >
+        Anterior
+      </button>
       <template
         v-for="(page, index) in this.totalPages"
         v-if="evenProductsList.length !== 0"
@@ -43,6 +58,14 @@
           </button>
         </template>
       </template>
+      <button
+        class="page-text"
+        v-on:click="setPage(pageAtual + 1)"
+        v-if="pageAtual !== totalPages && totalPages !== 0"
+      >
+        Próximo
+      </button>
+      <button class="page-text-disabled" v-else disabled>Próximo</button>
     </div>
   </div>
 </template>
@@ -90,6 +113,7 @@ select:focus {
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .main .product-pagination .page-text {
@@ -103,7 +127,16 @@ select:focus {
   margin-left: 5px;
   cursor: pointer;
 }
-
+.main .product-pagination .page-text-disabled {
+  border: 2px solid #ededed;
+  background-color: #ededed;
+  align-items: center;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
 .main .product-pagination .page-active {
   border: 2px solid black;
   background-color: black;
@@ -114,7 +147,7 @@ select:focus {
   border-radius: 20px;
   margin-right: 5px;
   margin-left: 5px;
-  cursor: pointer;
+  cursor: none;
 }
 
 .main .product-pagination .page-active:hover {
@@ -191,7 +224,7 @@ export default {
     setPage(pageNumber) {
       this.pageAtual = pageNumber;
       this.evenProducts();
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0 });
     },
   },
   computed: {

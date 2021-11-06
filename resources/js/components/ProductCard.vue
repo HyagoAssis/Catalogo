@@ -42,7 +42,7 @@ export default {
     type: String,
     price: Number,
     img: String,
-    key: Number,
+    id: Number,
   },
   name: "ProductCard",
 };
