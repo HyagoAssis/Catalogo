@@ -167,17 +167,25 @@ var axios = require("axios").default;
 
 var options = {
   method: "POST",
-  url: "https://scrapingant.p.rapidapi.com/post",
+  url: "http://127.0.0.1:5000/",
   headers: {
     "content-type": "application/json",
-    "x-rapidapi-host": process.env.MIX_API_HOST,
-    "x-rapidapi-key": process.env.MIX_API_KEY,
   },
   data: {
-    cookies: "cookie_name_1=cookie_value_1;cookie_name_2=cookie_value_2",
-    return_text: false,
     url: "https://chicorei.com/roupas/?per_page=120",
   },
+  // method: "POST",
+  // url: "https://scrapingant.p.rapidapi.com/post",
+  // headers: {
+  //   "content-type": "application/json",
+  //   "x-rapidapi-host": process.env.MIX_API_HOST,
+  //   "x-rapidapi-key": process.env.MIX_API_KEY,
+  // },
+  // data: {
+  //   cookies: "cookie_name_1=cookie_value_1;cookie_name_2=cookie_value_2",
+  //   return_text: false,
+  //   url: "https://chicorei.com/roupas/?per_page=120",
+  // },
 };
 
 export default {

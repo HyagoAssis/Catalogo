@@ -2314,17 +2314,25 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
 
 var options = {
   method: "POST",
-  url: "https://scrapingant.p.rapidapi.com/post",
+  url: "http://127.0.0.1:5000/",
   headers: {
-    "content-type": "application/json",
-    "x-rapidapi-host": "scrapingant.p.rapidapi.com",
-    "x-rapidapi-key": "159a460b81msh0a7ee9316e0548fp1efde3jsn3d68e831414d"
+    "content-type": "application/json"
   },
   data: {
-    cookies: "cookie_name_1=cookie_value_1;cookie_name_2=cookie_value_2",
-    return_text: false,
     url: "https://chicorei.com/roupas/?per_page=120"
-  }
+  } // method: "POST",
+  // url: "https://scrapingant.p.rapidapi.com/post",
+  // headers: {
+  //   "content-type": "application/json",
+  //   "x-rapidapi-host": process.env.MIX_API_HOST,
+  //   "x-rapidapi-key": process.env.MIX_API_KEY,
+  // },
+  // data: {
+  //   cookies: "cookie_name_1=cookie_value_1;cookie_name_2=cookie_value_2",
+  //   return_text: false,
+  //   url: "https://chicorei.com/roupas/?per_page=120",
+  // },
+
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ProductList",
