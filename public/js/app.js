@@ -2319,7 +2319,8 @@ var options = {
     "content-type": "application/json"
   },
   data: {
-    url: "https://chicorei.com/roupas/?per_page=120"
+    url: "https://chicorei.com/roupas/?per_page=120",
+    page: "22"
   } // method: "POST",
   // url: "https://scrapingant.p.rapidapi.com/post",
   // headers: {

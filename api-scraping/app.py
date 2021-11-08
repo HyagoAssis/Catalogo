@@ -11,7 +11,7 @@ CORS(app)
 @app.route("/", methods=["POST"])
 def selectHTML():
     body = request.get_json()
-    url = body['url']
+    url = body['url'] + '&page=' + body['page']
     page = urllib.request.urlopen(url)
     soup = bs(page, "html5lib")
 
