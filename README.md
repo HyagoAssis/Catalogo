@@ -54,6 +54,17 @@ Rodar as migrações
 ```sh
   php artisan migrate
 ```
+
+Em um terminal secundário é necessário entrar na pasta da API, entrar no ambiente virtualizado do python e instalar as depêndencias necessárias.
+```sh
+  cd api-scraping
+  source venv/bin/activate
+  pip install -r requirements.txt
+```
+E para rodar a API
+```sh
+ flask run
+```
 ### Rodar
 Para rodar o projeto bastar iniciar o servidor local
 
