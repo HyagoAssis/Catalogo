@@ -1,6 +1,8 @@
 <template>
   <div class="product-container">
-    <img :src="img" alt="Camiseta" loading="lazy" />
+    <div class="image-content">
+      <img :src="img" alt="Camiseta" loading="lazy" />
+    </div>
     <div class="product-content">
       <p class="product-name">{{ title }}</p>
       <p class="product-price">R$ {{ price.toFixed(2) }}</p>
@@ -10,9 +12,15 @@
 </template>
 
 <style>
-.product-container img {
+.product-container .image-content {
   width: 250px;
+  height: 375px;
   margin-top: 25px;
+  background: #dddee0;
+}
+.product-container .image-content img {
+  width: 100%;
+  height: 100%;
 }
 .product-container .product-content .product-name {
   margin-top: 5px;

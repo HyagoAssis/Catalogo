@@ -2113,6 +2113,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     title: String,
@@ -2320,7 +2328,7 @@ var options = {
   },
   data: {
     url: "https://chicorei.com/roupas/?per_page=120",
-    page: "22"
+    page: "2"
   } // method: "POST",
   // url: "https://scrapingant.p.rapidapi.com/post",
   // headers: {
@@ -6893,7 +6901,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.product-container img {\n  width: 250px;\n  margin-top: 25px;\n}\n.product-container .product-content .product-name {\n  margin-top: 5px;\n  margin-bottom: 0px;\n  font-size: 16px;\n  font-family: \"Roboto\", sans-serif;\n}\n.product-container .product-content .product-price {\n  margin-top: 5px;\n  margin-bottom: 5px;\n  font-size: 20px;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 700;\n}\n.product-container .product-content .product-portion {\n  margin-top: 0px;\n  margin-bottom: 0px;\n  font-family: \"Roboto\", sans-serif;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.product-container .image-content {\n  width: 250px;\n  height: 375px;\n  margin-top: 25px;\n  background: #dddee0;\n}\n.product-container .image-content img {\n  width: 100%;\n  height: 100%;\n}\n.product-container .product-content .product-name {\n  margin-top: 5px;\n  margin-bottom: 0px;\n  font-size: 16px;\n  font-family: \"Roboto\", sans-serif;\n}\n.product-container .product-content .product-price {\n  margin-top: 5px;\n  margin-bottom: 5px;\n  font-size: 20px;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 700;\n}\n.product-container .product-content .product-portion {\n  margin-top: 0px;\n  margin-bottom: 0px;\n  font-family: \"Roboto\", sans-serif;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39236,7 +39244,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "product-container" }, [
-    _c("img", { attrs: { src: _vm.img, alt: "Camiseta", loading: "lazy" } }),
+    _c("div", { staticClass: "image-content" }, [
+      _c("img", { attrs: { src: _vm.img, alt: "Camiseta", loading: "lazy" } }),
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "product-content" }, [
       _c("p", { staticClass: "product-name" }, [_vm._v(_vm._s(_vm.title))]),
