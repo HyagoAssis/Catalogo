@@ -1,5 +1,7 @@
 # Catálogo Chico Rei
 
+Projeto exibe o catálogo do site https://chicorei.com/, através de Scraping utilizando Python, através de um API com flask e consumindo a mesma no Laravel com a utilização do Vue.js como frontend.
+
 ## Tecnologias Utilizadas
 - Laravel
 - Vue.js
@@ -12,6 +14,7 @@
 - Mysql
 - PHP
 - APACHE
+- Python 3
 - Git
 
 ## API para Consumo
